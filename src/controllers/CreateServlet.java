@@ -71,13 +71,6 @@ public class CreateServlet extends HttpServlet {
                 // indexのページにリダイレクト
                 response.sendRedirect(request.getContextPath() + "/index");
             }
-
-            em.persist(t);
-            em.getTransaction().commit();
-            em.close();
-
-            response.sendRedirect(request.getContextPath() + "/index");
         }
     }
-
 }
